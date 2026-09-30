@@ -29,7 +29,7 @@ function TopicChip({
       aria-pressed={active}
       onClick={() => onSelect(topic)}
       className={cn(
-        "h-[43px] shrink-0 rounded-full px-4 text-body-m leading-none whitespace-nowrap transition-colors duration-200 lg:px-[17.5px]",
+        "h-10.75 shrink-0 rounded-full px-4 text-body-m leading-none whitespace-nowrap transition-colors duration-200 lg:px-[17.5px]",
         active
           ? "bg-lime-400 text-neutral-950"
           : "bg-neutral-50 text-neutral-700 hover:bg-neutral-100 hover:text-neutral-950",
@@ -53,7 +53,7 @@ export function TopicFilter({ active, onSelect, className }: TopicFilterProps) {
       role="group"
       aria-label="Filter courses by topic"
       className={cn(
-        "flex flex-wrap justify-center gap-x-3 gap-y-3 sm:gap-x-4 lg:flex-col lg:items-center lg:gap-y-[21px]",
+        "flex flex-wrap justify-center gap-x-3 gap-y-3 sm:gap-x-4 lg:flex-col lg:items-center lg:gap-y-5.25",
         className,
       )}
     >
@@ -93,7 +93,7 @@ export function TopicFilter({ active, onSelect, className }: TopicFilterProps) {
                 aria-expanded={expanded}
                 aria-controls={listId}
                 onClick={() => setExpanded((value) => !value)}
-                className="h-[43px] rounded-full px-2 text-body-m leading-none text-primary-800 underline-offset-4 hover:underline lg:px-0"
+                className="h-10.75 rounded-full px-2 text-body-m leading-none text-primary-800 underline-offset-4 hover:underline lg:px-0"
               >
                 {expanded ? "− Less" : "+ More"}
                 <span className="sr-only"> topics</span>
