@@ -23,7 +23,7 @@ export const courseLearners: Avatar[] = [
 ];
 
 export const testimonialAvatars = {
-  sarah: avatar("learner-2"),
-  james: avatar("james"),
-  alex: avatar("alex"),
+  sarah: avatar("student-3"),
+  james: avatar("student-5"),
+  alex: avatar("student-6"),
 };
