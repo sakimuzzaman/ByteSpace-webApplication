@@ -1,3 +1,4 @@
+import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CourseDiscovery } from "@/components/sections/CourseDiscovery";
 import { CreatorCta } from "@/components/sections/CreatorCta";
@@ -26,6 +27,8 @@ export default function HomePage() {
       <CreatorCta />
 
       <Testimonials />
+
+      <Footer />
 
     </>
   );
