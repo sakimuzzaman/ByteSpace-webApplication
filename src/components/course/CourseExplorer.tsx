@@ -11,10 +11,7 @@ type CourseBrowserProps = {
   query?: string;
 };
 
-/**
- * Writes the filter into the URL without a navigation, so filtered views can
- * be shared. Next.js syncs `history.replaceState` with `useSearchParams`.
- */
+
 function setParams(update: Record<string, string | null>) {
   const params = new URLSearchParams(window.location.search);
   for (const [key, value] of Object.entries(update)) {
@@ -52,7 +49,7 @@ export function CourseBrowser({ topicSlug, query = "" }: CourseBrowserProps) {
 
   return (
     <>
-      <TopicFilter active={topic} onSelect={selectTopic} className="mt-10 lg:mt-[42px]" />
+      <TopicFilter active={topic} onSelect={selectTopic} className="mt-10 lg:mt-10.5" />
 
       <p role="status" className="sr-only">
         Showing {status}
@@ -73,13 +70,13 @@ export function CourseBrowser({ topicSlug, query = "" }: CourseBrowserProps) {
       )}
 
       {results.length > 0 ? (
-        <CourseGrid courses={results} className="mt-10 lg:mt-[77px]" />
+        <CourseGrid courses={results} className="mt-10 lg:mt-19.25" />
       ) : (
-        <div className="mt-10 flex flex-col items-center rounded-card border border-dashed border-neutral-200 bg-surface px-6 py-14 text-center lg:mt-[77px] lg:py-20">
+        <div className="mt-10 flex flex-col items-center rounded-card border border-dashed border-neutral-200 bg-surface px-6 py-14 text-center lg:mt-19.25 lg:py-20">
           <h3 className="text-heading-xs text-ink">
             {term ? `No courses match “${term}”` : `No ${topic.label} courses yet`}
           </h3>
-          <p className="mt-3 max-w-[440px] text-body-m text-neutral-500">
+          <p className="mt-3 max-w-110 text-body-m text-neutral-500">
             New classes are added every week. In the meantime, browse our featured courses.
           </p>
           <Button onClick={resetFilters} className="mt-6">
