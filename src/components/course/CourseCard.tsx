@@ -16,7 +16,7 @@ type CourseCardProps = {
 
 function MetaChip({ children }: { children: ReactNode }) {
   return (
-    <li className="flex h-[26px] shrink-0 items-center rounded-full bg-track/60 px-2 text-body-xs leading-none whitespace-nowrap text-body backdrop-blur-[4px] @min-[330px]:px-[13.5px]">
+    <li className="flex h-6.5 shrink-0 items-center rounded-full bg-track/60 px-2 text-body-xs leading-none whitespace-nowrap text-body backdrop-blur-xs @min-[330px]:px-[13.5px]">
       {children}
     </li>
   );
@@ -26,11 +26,11 @@ export function CourseCard({ course, className, priority }: CourseCardProps) {
   return (
     <article
       className={cn(
-        "group relative flex flex-col rounded-card border border-neutral-200 bg-white p-[15px] pb-5 transition-shadow duration-300 hover:shadow-[0_16px_40px_-16px_rgba(4,8,25,0.18)]",
+        "group relative flex flex-col rounded-card border border-neutral-200 bg-white p-3.75 pb-5 transition-shadow duration-300 hover:shadow-[0_16px_40px_-16px_rgba(4,8,25,0.18)]",
         className,
       )}
     >
-      <div className="@container relative aspect-[341/195] overflow-hidden rounded-xl bg-[#443131]">
+      <div className="@container relative aspect-341/195 overflow-hidden rounded-xl bg-[#443131]">
         <Image
           src={course.image}
           alt=""
@@ -41,7 +41,7 @@ export function CourseCard({ course, className, priority }: CourseCardProps) {
         />
         <ul
           aria-label="Course details"
-          className="absolute inset-x-[13px] bottom-[19px] flex gap-2 overflow-hidden @min-[330px]:gap-3"
+          className="absolute inset-x-3.25 bottom-4.75 flex gap-2 overflow-hidden @min-[330px]:gap-3"
         >
           <MetaChip>{course.lessons} Lessons</MetaChip>
           <MetaChip>{course.duration}</MetaChip>
@@ -64,7 +64,7 @@ export function CourseCard({ course, className, priority }: CourseCardProps) {
             by <span className="text-primary-800">{course.creator}</span>
           </p>
         </div>
-        <p className="flex shrink-0 items-center gap-1 pr-[5px] text-body-l leading-6 text-body">
+        <p className="flex shrink-0 items-center gap-1 pr-1.25 text-body-l leading-6 text-body">
           <span className="sr-only">Rated </span>
           {course.rating}
           <span className="sr-only"> out of 5</span>
