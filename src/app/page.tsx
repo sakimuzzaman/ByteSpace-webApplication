@@ -1,5 +1,6 @@
 import { Header } from "@/components/layout/Header";
 import { CourseDiscovery } from "@/components/sections/CourseDiscovery";
+import { CreatorCta } from "@/components/sections/CreatorCta";
 import { GroupLogos } from "@/components/sections/GroupLogos";
 import { GrowthSection } from "@/components/sections/GrowthSection";
 import { Hero } from "@/components/sections/Hero";
@@ -20,6 +21,8 @@ export default function HomePage() {
       <LearningPaths />
 
       <GrowthSection />
+
+      <CreatorCta />
 
     </>
   );
