@@ -14,12 +14,12 @@ export const happyStudents: Avatar[] = [
   avatar("avatar-7"),
 ];
 
-/** Four learners shown on every course card. */
+/** Four students shown on every course card. */
 export const courseLearners: Avatar[] = [
+  avatar("student-1"),
   avatar("student-2"),
-  avatar("learner-1"),
-  avatar("learner-2"),
-  avatar("learner-3"),
+  avatar("student-3"),
+  avatar("student-4"),
 ];
 
 export const testimonialAvatars = {
