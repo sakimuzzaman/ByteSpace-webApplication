@@ -67,3 +67,43 @@
   --tracking-heading: -0.01em;
   --radius-card: 1.5rem;
 }
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-white font-sans text-neutral-950 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading font-semibold tracking-heading;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-800;
+  }
+
+  [id] {
+    scroll-margin-top: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
