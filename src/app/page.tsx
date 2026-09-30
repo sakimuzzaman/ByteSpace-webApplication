@@ -5,6 +5,7 @@ import { GroupLogos } from "@/components/sections/GroupLogos";
 import { GrowthSection } from "@/components/sections/GrowthSection";
 import { Hero } from "@/components/sections/Hero";
 import { LearningPaths } from "@/components/sections/LearningPaths";
+import { Testimonials } from "@/components/sections/Testimonials";
 
 
 export default function HomePage() {
@@ -23,6 +24,8 @@ export default function HomePage() {
       <GrowthSection />
 
       <CreatorCta />
+
+      <Testimonials />
 
     </>
   );
