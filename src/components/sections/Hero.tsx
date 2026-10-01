@@ -12,6 +12,7 @@ export function Hero() {
       aria-labelledby="hero-heading"
       className="relative isolate overflow-hidden bg-primary-800 pt-34 sm:pt-38 lg:h-256 lg:pt-41.5"
     >
+      
       <GridBackdrop />
 
       <Container className="relative z-10 text-center">
